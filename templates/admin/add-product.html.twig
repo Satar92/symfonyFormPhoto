@@ -1,0 +1,68 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Ajout nouveau produit!{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Ajouter un produit</h1>
+{% include "./template-parts/general-notifs.html.twig" %}
+ <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+       {{ form_start(form, {'attr': {'id': 'form_produit'}}) }}
+      <div class="form-group">
+        {{ form_label(form.reference, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.reference, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.reference, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.titre, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.titre, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.description, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.description, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.couleur, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.couleur, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.couleur, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.taille, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.taille, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.taille, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.sexe, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.sexe, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.sexe, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.photo, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.photo, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.photo, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.prix, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.prix, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.prix, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.stock, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.stock, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.stock, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="form-group">
+        {{ form_label(form.categorie, null, {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_errors(form.categorie, {'attr': {'class': 'error-message'}}) }}
+        {{ form_widget(form.categorie, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+      {{ form_end(form) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

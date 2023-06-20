@@ -3,3 +3,21 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+app_home:
+    path: /
+    controller: App\Controller\HomeController::index
+    methods: GET|POST
+
+
+    # back office admin
+    # tableau de board de l'admin
+app_admin:
+     path: /admin
+     controller: App\Controller\Admin\AdminController::index
+     methods: GET
+
+app_add_product:
+     path: /admin/add-product
+     controller: App\Controller\Admin\AdminController::addProduct
+     methods: GET|POST
